@@ -1,17 +1,40 @@
 require './nabeatsu'
 describe Nabeatsu do
   describe "say" do
-    before do
-      @someone = Nabeatsu.new
+    context "given 3" do
+      it "should eq hoge" do
+        subject.say(3).should eq "hoge"
+      end
     end
-    it "should say hoge given 3 " do
-      @someone.say(3).should eq "hoge"
+
+    context "given 1" do
+      it "should eq 1" do
+        subject.say(1).should eq "1"
+      end
     end
-    it "should say 1 given 1 " do
-      @someone.say(1).should eq "1"
+
+    context "given 6" do
+      it "should eq 6" do
+        subject.say(6).should eq "hoge"
+      end
     end
-    it "should say hoge given 13 " do
-      @someone.say(13).should eq "hoge"
+
+    context "given 13" do
+      it "should eq hoge" do
+        subject.say(13).should eq "hoge"
+      end
+    end
+
+    context "given 31" do
+      it "should eq hoge" do
+        subject.say(31).should eq "hoge"
+      end
+    end
+
+    context "given 14" do
+      it "should eq 14" do
+        subject.say(14).should eq "14"
+      end
     end
   end
 end

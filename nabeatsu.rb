@@ -3,8 +3,14 @@ class Nabeatsu
   end
 
   def say(number)
-    return "hoge" if number == 3
-    return "hoge" if number == 13
+    if (number % 3) == 0
+      return "hoge"
+    end
+
+    if number.to_s =~ /3/
+      return "hoge"
+    end
+
     number.to_s
   end
 end
