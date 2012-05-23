@@ -37,4 +37,21 @@ describe Nabeatsu do
       end
     end
   end
+
+  describe ".forall" do
+    context "given 1..10" do
+      subject { Nabeatsu.forall((1..10)) }
+      let(:expected) {
+        %w(1 2 hoge 4 5 hoge 7 8 hoge 10)
+      }
+      it { should == expected }
+    end
+    context "given 30..39" do
+      subject { Nabeatsu.forall((30..39)) }
+      let(:expected) {
+        %w(hoge) * 10
+      }
+      it { should == expected }
+    end
+  end
 end

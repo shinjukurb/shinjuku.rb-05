@@ -13,4 +13,9 @@ class Nabeatsu
 
     number.to_s
   end
+
+  def self.forall(range)
+    nabeatsu = Nabeatsu.new
+    range.map{|i| nabeatsu.say(i) }
+  end
 end
