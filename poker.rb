@@ -1,6 +1,7 @@
 class Poker
   def self.one_pair?(cards)
-    true
+    nums = cards.map {|c| c.number }
+    !(nums.uniq.size == 5)
   end
 end
 
